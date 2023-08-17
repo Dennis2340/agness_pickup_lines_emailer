@@ -4,7 +4,7 @@
   "description": "This backend send pickup lines to a girl called agness for the next hundred days",
   "main": "index.js",
   "scripts": {
-    "start": " node index.js",
+    "start": " nodemon index.js",
     "build": "npm install && echo 'Build complete'"
     
   },
