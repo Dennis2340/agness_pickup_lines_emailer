@@ -58,7 +58,7 @@ function scheduleEmails() {
         dayCounter++; // Increment the counter after sending email
   
         // Schedule the next email after a delay (e.g., 24 hours)
-        const delayMs =  4000 // 24 hours in milliseconds 24 * 60 * 60 * 1000;
+        const delayMs =  24 * 60 * 60 * 1000 // 24 hours in milliseconds 24 * 60 * 60 * 1000;
         setTimeout(scheduleEmails, delayMs);
       }
     } else {
