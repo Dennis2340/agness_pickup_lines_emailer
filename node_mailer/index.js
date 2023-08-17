@@ -52,7 +52,7 @@ async function scheduleEmails() {
     dayCounter++; // Increment the counter
 
     // Schedule the next email after 10 seconds
-    await new Promise(resolve => setTimeout(resolve, 10000)); // 10 seconds delay
+    await new Promise(resolve => setTimeout(resolve, 24 * 60 * 60 * 1000)); // 10 seconds delay
   }
 
   console.log('Email scheduling complete.');
