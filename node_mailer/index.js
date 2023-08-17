@@ -7,7 +7,7 @@ const emailUser = 'kamaradennis36@gmail.com';
 const emailPass = 'yxarahewlfdgkkwr';
 
 // Replace with recipient's email
-const recipientEmail = 'deniskamara23@gmail.com';
+const recipientEmail = 'kargboagness0@gmail.com';
 
 // Initialize day counter
 let dayCounter = 0;
