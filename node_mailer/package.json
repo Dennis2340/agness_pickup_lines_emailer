@@ -4,8 +4,8 @@
   "description": "This backend send pickup lines to a girl called agness for the next hundred days",
   "main": "index.js",
   "scripts": {
-    "start": " node index.js",
-    "build": "npm run build"
+    "start": " node index.js"
+    
   },
   "repository": {
     "type": "git",
