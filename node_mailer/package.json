@@ -1,0 +1,25 @@
+{
+  "name": "pickuplines",
+  "version": "1.0.0",
+  "description": "This backend send pickup lines to a girl called agness for the next hundred days",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dennis2340/agness_pickup_lines_emailer.git"
+  },
+  "author": "Dennis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dennis2340/agness_pickup_lines_emailer/issues"
+  },
+  "homepage": "https://github.com/Dennis2340/agness_pickup_lines_emailer#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^6.9.4"
+  }
+}
