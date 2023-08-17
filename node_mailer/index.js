@@ -47,24 +47,24 @@ async function sendEmail(pickUpLine) {
 
 // Fetch pick-up lines and send email daily for the next 100 days
 function scheduleEmails() {
-    if (dayCounter < 100) { // Limit to 100 days
-      if (pickupLines.length > 0) {
-        const randomIndex = dayCounter % pickupLines.length;
-        const randomPickUpLine = pickupLines[randomIndex];
-        console.log(`Scheduled email for day ${dayCounter + 1}`);
-        console.log('Email content:', randomPickUpLine);
-        sendEmail(randomPickUpLine);
-  
-        dayCounter++; // Increment the counter after sending email
-  
-        // Schedule the next email after a delay (e.g., 24 hours)
-        const delayMs =  24 * 60 * 60 * 1000 // 24 hours in milliseconds 24 * 60 * 60 * 1000;
-        setTimeout(scheduleEmails, delayMs);
-      }
-    } else {
-      console.log('Email scheduling complete.');
+  if (dayCounter < 75) { // Limit to 100 days
+    if (pickupLines.length > 0) {
+      const randomIndex = dayCounter % pickupLines.length;
+      const randomPickUpLine = pickupLines[randomIndex];
+      console.log(`Scheduled email for day ${dayCounter + 1}`);
+      console.log('Email content:', randomPickUpLine);
+      sendEmail(randomPickUpLine);
+
+      dayCounter++; // Increment the counter after sending email
+
+      // Schedule the next email after a delay (e.g., 24 hours)
+      const delayMs =  24 * 60 * 60 * 1000 // 24 hours in milliseconds 24 * 60 * 60 * 1000;
+      setTimeout(scheduleEmails, delayMs);
     }
+  } else {
+    console.log('Email scheduling complete.');
   }
+}
   
 
   // Start scheduling emails
