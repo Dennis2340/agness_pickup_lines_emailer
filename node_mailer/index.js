@@ -12,9 +12,6 @@ const recipientEmail = 'deniskamara23@gmail.com';
 // Initialize day counter
 let dayCounter = 0;
 
-console.log("testing")
-
-
 // Send email using nodemailer
 async function sendEmail(pickUpLine) {
     
@@ -44,30 +41,24 @@ async function sendEmail(pickUpLine) {
 }
 
 
-
 // Fetch pick-up lines and send email daily for the next 100 days
-function scheduleEmails() {
-  if (dayCounter < 75) { // Limit to 100 days
-    if (pickupLines.length > 0) {
-      const randomIndex = dayCounter % pickupLines.length;
-      const randomPickUpLine = pickupLines[randomIndex];
-      console.log(`Scheduled email for day ${dayCounter + 1}`);
-      console.log('Email content:', randomPickUpLine);
-      sendEmail(randomPickUpLine);
+async function scheduleEmails() {
+  while (dayCounter < pickupLines.length) {
+    const pickUpLine = pickupLines[dayCounter];
+    console.log(`Scheduled email for day ${dayCounter + 1}`);
+    console.log('Email content:', pickUpLine);
+    await sendEmail(pickUpLine);
 
-      dayCounter++; // Increment the counter after sending email
+    dayCounter++; // Increment the counter
 
-      // Schedule the next email after a delay (e.g., 24 hours)
-      const delayMs =  24 * 60 * 60 * 1000 // 24 hours in milliseconds 24 * 60 * 60 * 1000;
-      setTimeout(scheduleEmails, delayMs);
-    }
-  } else {
-    console.log('Email scheduling complete.');
+    // Schedule the next email after 10 seconds
+    await new Promise(resolve => setTimeout(resolve, 10000)); // 10 seconds delay
   }
+
+  console.log('Email scheduling complete.');
 }
-  
 
-  // Start scheduling emails
-  scheduleEmails();
+// Start scheduling emails
+scheduleEmails();
 
-console.log("done")
+console.log("done");

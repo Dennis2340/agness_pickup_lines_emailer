@@ -85,4 +85,4 @@ const pickupLines = [
 ];
 
 // Print all the pickup lines
-
+module.exports = pickupLines
