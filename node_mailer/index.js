@@ -44,7 +44,8 @@ async function sendEmail(pickUpLine) {
 // Fetch pick-up lines and send email daily for the next 100 days
 async function scheduleEmails() {
   while (dayCounter < pickupLines.length) {
-    const pickUpLine = pickupLines[dayCounter];
+   let randomIndex = Math.floor(Math.random() * 74);
+    const pickUpLine = pickupLines[randomIndex];
     console.log(`Scheduled email for day ${dayCounter + 1}`);
     console.log('Email content:', pickUpLine);
     await sendEmail(pickUpLine);
