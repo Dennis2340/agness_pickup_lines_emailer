@@ -9,6 +9,7 @@ const emailPass = 'yxarahewlfdgkkwr';
 // Replace with recipient's email
 const recipientEmail = 'kargboagness0@gmail.com';
 
+console.log("testing the plugin");
 // Initialize day counter
 let dayCounter = 0;
 
