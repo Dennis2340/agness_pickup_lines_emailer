@@ -7,7 +7,7 @@ const emailUser = 'kamaradennis36@gmail.com';
 const emailPass = 'yxarahewlfdgkkwr';
 
 console.log("testing the commit, hope u understand");
-console.log("testing the commit, hope u understand");
+
 // Replace with recipient's email
 const recipientEmail = 'kargboagness0@gmail.com';
 
