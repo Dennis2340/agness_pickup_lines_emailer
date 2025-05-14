@@ -58,7 +58,7 @@ async function scheduleEmails() {
     await new Promise(resolve => setTimeout(resolve, 24 * 60 * 60 * 1000)); // 10 seconds delay
   }
 
-  console.log('Email scheduling complete.');
+ // console.log('Email scheduling complete.');
 }
 
 // Start scheduling emails
