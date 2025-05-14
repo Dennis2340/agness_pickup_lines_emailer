@@ -6,8 +6,6 @@ const pickupLines = require('./pickline') ;
 const emailUser = 'kamaradennis36@gmail.com';
 const emailPass = 'yxarahewlfdgkkwr';
 
-console.log("testing the commit, hope u understand");
-
 // Replace with recipient's email
 const recipientEmail = 'kargboagness0@gmail.com';
 
@@ -58,7 +56,7 @@ async function scheduleEmails() {
     await new Promise(resolve => setTimeout(resolve, 24 * 60 * 60 * 1000)); // 10 seconds delay
   }
 
- // console.log('Email scheduling complete.');
+  console.log('Email scheduling complete.');
 }
 
 // Start scheduling emails
